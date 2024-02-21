@@ -1,0 +1,47 @@
+<p>binding works! {{topic}}</p>
+
+<hr>
+<h2>Available product(s)</h2>
+<h4>Product ID : {{productId}}</h4>
+<h4>Description : {{description}}</h4>
+
+<div *ngIf="isqtyavailable; else notavail">
+
+    <h4> Available : <span [style.background-color]="available">
+        &nbsp; &nbsp; &nbsp;
+    </span></h4></div>
+
+<ng-template #notavail>
+    <h4> Available : <span [style.background-color]="notavailable">  
+        &nbsp; &nbsp; &nbsp;
+    </span></h4>
+</ng-template>
+
+<h3>Enter order quantity : 
+    <input type="text" [(ngModel)]="orderedqty" />
+</h3>
+
+<h3> You have entered : {{orderedqty}}</h3>
+
+<h3> Place order 
+    <button type="button" (click)="takeOrder()"> order</button>
+</h3>
+
+<table>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+    </tr>
+</table>
+
+
+<hr>
+<table>
+    <tr *ngFor="let Item of items">
+        <td>{{Item.itemCode}}</td>
+        <td>{{Item.name}}</td>
+        <td>{{Item.description}}</td>
+        <td>{{Item.price}}</td>
+        <td>{{Item.qty}}</td>
+    </tr>
+</table>

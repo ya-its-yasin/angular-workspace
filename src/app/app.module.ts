@@ -3,14 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BindingComponent } from './binding/binding.component';
+import { FormsModule, NgModel } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { ResttestComponent } from './resttest/resttest.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { PostComponent } from './crud/post/post.component';
+import { UpdateComponent } from './crud/update/update.component';
+import { DeleteComponent } from './crud/delete/delete.component';
+import { FetchComponent } from './crud/fetch/fetch.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BindingComponent,
+    LoginComponent,
+    ResttestComponent,
+    PostComponent,
+    UpdateComponent,
+    DeleteComponent,
+    FetchComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

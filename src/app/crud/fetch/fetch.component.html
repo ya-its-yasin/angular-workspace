@@ -1,0 +1,18 @@
+<p>fetch works!</p>
+
+<div>
+    <h2>Product List Spring boot REST API</h2>
+    <table border="2">
+        <thead>
+            <th>Product ID</th>
+            <th>Description</th>
+            <th>Price</th>
+            <!--<th colspan="2">Operations</th>-->
+        </thead>
+        <tr *ngFor="let product of products">
+        <td>{{product.pid}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+        </tr>
+    </table>
+</div>
