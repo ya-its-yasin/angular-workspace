@@ -17,4 +17,9 @@ export class ProductService {
   saveProduct(product:Product):Observable<Object>{
     return this.http.post("http://localhost:8090/product/v1/addproduct",product);
   }
+
+  findProduct(pid:number|undefined):Observable<Product>{
+    return this.http.get<Product>("http://localhost:8090/product/v1/product/"+pid);
+  }
+
 }

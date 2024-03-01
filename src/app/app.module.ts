@@ -13,6 +13,7 @@ import { PostComponent } from './crud/post/post.component';
 import { UpdateComponent } from './crud/update/update.component';
 import { DeleteComponent } from './crud/delete/delete.component';
 import { FetchComponent } from './crud/fetch/fetch.component';
+import { FindByIdComponent } from './crud/find-by-id/find-by-id.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FetchComponent } from './crud/fetch/fetch.component';
     PostComponent,
     UpdateComponent,
     DeleteComponent,
-    FetchComponent
+    FetchComponent,
+    FindByIdComponent
   ],
   imports: [
     FormsModule,

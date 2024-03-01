@@ -1,0 +1,21 @@
+<p>find-by-id works!</p>
+
+
+<form (click)="findProduct()" #pid="ngForm">
+    <div class="form-group">
+        <label for="">Product ID</label>
+        <input 
+        type="number"
+        class="form-control"
+        id="id" 
+        required
+        minlength="1"
+        [(ngModel)]="product.pid" 
+        name = "id" />
+    </div>
+
+    <button classs="btn btn-success" >Find</button>
+
+</form>
+
+
